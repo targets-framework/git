@@ -269,9 +269,9 @@
                 "type": "variable"
             },
             {
-                "name": "--",
+                "name": "pathspec",
                 "type": "value",
-                "value": "-- ${pathspec}"
+                "value": [ "--", "${pathspec}" ]
             }
         ]
       },
