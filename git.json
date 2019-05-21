@@ -2,7 +2,279 @@
   "kind": "shell",
   "spec": {
     "command": "git",
+    "collections": {
+        "ctrl": [
+            {
+                "name": "verbose",
+                "type": "option",
+                "useValue": false,
+                "without": "v"
+            },
+            {
+                "name": "v",
+                "type": "flag",
+                "without": "verbose"
+            },
+            {
+                "name": "dry-run",
+                "type": "option",
+                "useValue": false,
+                "without": "n"
+            },
+            {
+                "name": "n",
+                "type": "flag",
+                "without": "dry-run"
+            },
+            {
+                "name": "force",
+                "type": "option",
+                "useValue": false,
+                "without": "f"
+            },
+            {
+                "name": "f",
+                "type": "flag",
+                "without": "force"
+            },
+            {
+                "name": "interactive",
+                "type": "option",
+                "useValue": false,
+                "without": "i"
+            },
+            {
+                "name": "i",
+                "type": "flag",
+                "without": "interactive"
+            }
+        ]
+    },
     "args": [
+      {
+          "name": "version",
+          "type": "option",
+          "useValue": false
+      },
+      {
+          "name": "help",
+          "type": "option",
+          "useValue": false
+      },
+      {
+          "name": "C",
+          "type": "flag",
+          "useValue": true
+      },
+      {
+          "name": "c",
+          "type": "flag",
+          "join": "=",
+          "useValue": true
+      },
+      {
+          "name": "exec-path",
+          "type": "option",
+          "join": "=",
+          "useValue": true
+      },
+      {
+          "name": "html-path",
+          "type": "option",
+          "useValue": false
+      },
+      {
+          "name": "man-path",
+          "type": "option",
+          "useValue": false
+      },
+      {
+          "name": "info-path",
+          "type": "option",
+          "useValue": false
+      },
+      {
+          "name": "p",
+          "type": "flag",
+          "without": [ "paginate", "P", "no-pager" ]
+      },
+      {
+          "name": "paginate",
+          "type": "option",
+          "without": [ "p", "P", "no-pager" ]
+      },
+      {
+          "name": "P",
+          "type": "option",
+          "without": [ "paginate", "p", "no-pager" ]
+      },
+      {
+          "name": "no-pager",
+          "type": "option",
+          "without": [ "P", "paginate", "p" ]
+      },
+      {
+          "name": "no-replace-objects",
+          "type": "option",
+          "useValue": false
+      },
+      {
+          "name": "bare",
+          "type": "option",
+          "useValue": false
+      },
+      {
+          "name": "git-dir",
+          "type": "option",
+          "join": "=",
+          "useValue": true
+      },
+      {
+          "name": "work-tree",
+          "type": "option",
+          "join": "=",
+          "useValue": true
+      },
+      {
+          "name": "namespace",
+          "type": "option",
+          "join": "=",
+          "useValue": true
+      },
+      {
+          "name": "super-prefix",
+          "type": "option",
+          "join": "=",
+          "useValue": true
+      },
+      {
+        "command": "add",
+        "args": [
+            {
+                "name": "ctrl",
+                "type": "collection"
+            },
+            {
+                "name": "edit",
+                "type": "option",
+                "useValue": false,
+                "without": "e"
+            },
+            {
+                "name": "e",
+                "type": "flag",
+                "without": "edit"
+            },
+            {
+                "name": "all",
+                "type": "option",
+                "useValue": false,
+                "without": [
+                    "no-all",
+                    "ignore-removal",
+                    "no-ignore-removal",
+                    "update",
+                    "u"
+                ]
+            },
+            {
+                "name": "no-all",
+                "type": "option",
+                "useValue": false,
+                "without": [
+                    "all",
+                    "ignore-removal",
+                    "no-ignore-removal",
+                    "update",
+                    "u"
+                ]
+            },
+            {
+                "name": "ignore-removal",
+                "type": "option",
+                "useValue": false,
+                "without": [
+                    "all",
+                    "no-all",
+                    "no-ignore-removal",
+                    "update",
+                    "u"
+                ]
+            },
+            {
+                "name": "update",
+                "type": "option",
+                "useValue": false,
+                "without": [
+                    "all",
+                    "no-all",
+                    "ignore-removal",
+                    "no-ignore-removal",
+                    "u"
+                ]
+            },
+            {
+                "name": "u",
+                "type": "flag",
+                "without": [
+                    "all",
+                    "no-all",
+                    "ignore-removal",
+                    "no-ignore-removal",
+                    "update"
+                ]
+            },
+            {
+                "name": "intent-to-add",
+                "type": "option",
+                "useValue": false,
+                "without": "N"
+            },
+            {
+                "name": "N",
+                "type": "flag",
+                "without": "intent-to-add"
+            },
+            {
+                "name": "refresh",
+                "type": "option",
+                "useValue": false
+            },
+            {
+                "name": "ignore-errors",
+                "type": "option",
+                "useValue": false
+            },
+            {
+                "name": "ignore-missing",
+                "type": "option",
+                "useValue": false
+            },
+            {
+                "name": "renormalize",
+                "type": "option",
+                "useValue": false
+            },
+            {
+                "name": "chmod",
+                "type": "option",
+                "join": "=",
+                "choices": [
+                    "+x",
+                    "-x"
+                ]
+            },
+            {
+                "name": "pathspec",
+                "type": "variable"
+            },
+            {
+                "name": "--",
+                "type": "value",
+                "value": "-- ${pathspec}"
+            }
+        ]
+      },
       {
         "command": "checkout",
         "args": [
