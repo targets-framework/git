@@ -266,12 +266,7 @@
             },
             {
                 "name": "pathspec",
-                "type": "variable"
-            },
-            {
-                "name": "pathspec",
-                "type": "value",
-                "value": [ "--", "${pathspec}" ]
+                "type": "--"
             }
         ]
       },
@@ -342,6 +337,22 @@
             "name": "tags",
             "type": "option",
             "useValue": false
+          }
+        ]
+      },
+      {
+        "command": "pull",
+        "args": [
+          {
+            "name": "rebase",
+            "type": "option",
+            "useValue": false,
+            "without": "r"
+          },
+          {
+            "name": "r",
+            "type": "flag",
+            "without": "rebase"
           }
         ]
       }
