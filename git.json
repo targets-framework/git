@@ -368,7 +368,8 @@
                     {
                         "name": "r",
                         "type": "flag",
-                        "without": [ "remotes", "a", "all" ]
+                        "without": [ "remotes", "a", "all" ],
+                        "unless": [ "d", "D" ]
                     },
                     {
                         "name": "all",
@@ -497,12 +498,19 @@
                     {
                         "name": "d",
                         "type": "flag",
-                        "without": "D"
+                        "without": "D",
+                        "with": "branchname"
                     },
                     {
                         "name": "D",
                         "type": "flag",
-                        "without": "d"
+                        "without": "d",
+                        "with": "branchname"
+                    },
+                    {
+                        "name": "r",
+                        "type": "flag",
+                        "when": [ "d", "D" ]
                     },
                     {
                         "name": "edit-description",
