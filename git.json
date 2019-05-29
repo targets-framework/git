@@ -2,6 +2,7 @@
     "kind": "shell",
     "spec": {
         "command": "git",
+        "version": "2.21.0",
         "collections": {
             "verbose": [
                 {
@@ -538,6 +539,176 @@
                 ]
             },
             {
+                "command": "clone",
+                "args": [
+                    {
+                        "name": "template",
+                        "type": "option",
+                        "join": "="
+                    },
+                    {
+                        "name": "local",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "l"
+                    },
+                    {
+                        "name": "l",
+                        "type": "flag",
+                        "without": "local"
+                    },
+                    {
+                        "name": "shared",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "s"
+                    },
+                    {
+                        "name": "s",
+                        "type": "flag",
+                        "without": "shared"
+                    },
+                    {
+                        "name": "no-hardlinks",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "verbose",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "progress",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "no-checkout",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "n"
+                    },
+                    {
+                        "name": "n",
+                        "type": "flag",
+                        "without": "no-checkout"
+                    },
+                    {
+                        "name": "bare",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "mirror",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "origin",
+                        "type": "option",
+                        "without": "o"
+                    },
+                    {
+                        "name": "o",
+                        "type": "flag",
+                        "useValue": true,
+                        "without": "origin"
+                    },
+                    {
+                        "name": "branch",
+                        "type": "option",
+                        "without": "b"
+                    },
+                    {
+                        "name": "b",
+                        "type": "flag",
+                        "useValue": true,
+                        "without": "branch"
+                    },
+                    {
+                        "name": "upload-pack",
+                        "type": "option",
+                        "without": "u"
+                    },
+                    {
+                        "name": "u",
+                        "type": "flag",
+                        "useValue": true,
+                        "without": "upload-pack"
+                    },
+                    {
+                        "name": "reference",
+                        "type": "option"
+                    },
+                    {
+                        "name": "dissociate",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "separate-git-dir",
+                        "type": "option"
+                    },
+                    {
+                        "name": "depth",
+                        "type": "option"
+                    },
+                    {
+                        "name": "single-branch",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "no-single-branch"
+                    },
+                    {
+                        "name": "no-single-branch",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "single-branch"
+                    },
+                    {
+                        "name": "no-tags",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "recurse-submodules",
+                        "type": "option",
+                        "join": "="
+                    },
+                    {
+                        "name": "shallow-submodules",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "no-shallow-submodules"
+                    },
+                    {
+                        "name": "no-shallow-submodules",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "shallow-submodules"
+                    },
+                    {
+                        "name": "jobs",
+                        "type": "option"
+                    },
+                    {
+                        "name": "--",
+                        "type": "value",
+                        "value": "--"
+                    },
+                    {
+                        "name": "repository",
+                        "type": "value",
+                        "required": "true"
+                    },
+                    {
+                        "name": "directory",
+                        "type": "value",
+                        "with": "repository"
+                    }
+                ]
+            },
+            {
                 "command": "add",
                 "args": [
                     {
@@ -665,6 +836,151 @@
                             "+x",
                             "-x"
                         ]
+                    },
+                    {
+                        "name": "pathspec",
+                        "type": "--"
+                    }
+                ]
+            },
+            {
+                "command": "status",
+                "args": [
+                    {
+                        "name": "short",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "s"
+                    },
+                    {
+                        "name": "s",
+                        "type": "flag",
+                        "without": "short"
+                    },
+                    {
+                        "name": "branch",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "b"
+                    },
+                    {
+                        "name": "b",
+                        "type": "flag",
+                        "without": "branch"
+                    },
+                    {
+                        "name": "show-stash",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "porcelain",
+                        "type": "option",
+                        "useValue": "string",
+                        "join": "="
+                    },
+                    {
+                        "name": "long",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "verbose",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "u",
+                        "type": "flag",
+                        "useValue": "string",
+                        "join": "",
+                        "without": "untracked-files",
+                        "choices": [
+                            "no",
+                            "normal",
+                            "all"
+                        ]
+                    },
+                    {
+                        "name": "untracked-files",
+                        "type": "option",
+                        "useValue": "string",
+                        "join": "=",
+                        "without": "u",
+                        "choices": [
+                            "no",
+                            "normal",
+                            "all"
+                        ]
+                    },
+                    {
+                        "name": "ignore-submodules",
+                        "type": "option",
+                        "useValue": "string",
+                        "join": "=",
+                        "choices": [
+                            "none",
+                            "untracked",
+                            "dirty",
+                            "all"
+                        ]
+                    },
+                    {
+                        "name": "ignored",
+                        "type": "option",
+                        "useValue": "string",
+                        "join": "=",
+                        "choices": [
+                            "traditional",
+                            "no",
+                            "matching"
+                        ]
+                    },
+                    {
+                        "name": "z",
+                        "type": "flag"
+                    },
+                    {
+                        "name": "column",
+                        "type": "option",
+                        "useValue": "string",
+                        "join": "=",
+                        "without": "no-column"
+                    },
+                    {
+                        "name": "no-column",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "column"
+                    },
+                    {
+                        "name": "ahead-behind",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "no-ahead-behind"
+                    },
+                    {
+                        "name": "no-ahead-behind",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "ahead-behind"
+                    },
+                    {
+                        "name": "renames",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "no-renames"
+                    },
+                    {
+                        "name": "no-renames",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "renames"
+                    },
+                    {
+                        "name": "find-renames",
+                        "type": "option",
+                        "useValue": [ "string", "number" ],
+                        "join": "="
                     },
                     {
                         "name": "pathspec",
@@ -887,19 +1203,6 @@
                     },
                     {
                         "name": "start-point",
-                        "type": "value"
-                    }
-                ]
-            },
-            {
-                "command": "clone",
-                "args": [
-                    {
-                        "name": "url",
-                        "type": "value"
-                    },
-                    {
-                        "name": "dest",
                         "type": "value"
                     }
                 ]
