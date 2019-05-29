@@ -119,6 +119,314 @@
                     "useValue": false,
                     "without": "color"
                 }
+            ],
+            "diff": [
+                {
+                    "name": "patch",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [ "p", "u", "s", "no-patch" ]
+                },
+                {
+                    "name": "p",
+                    "type": "flag",
+                    "without": [ "patch", "u", "s", "no-patch" ]
+                },
+                {
+                    "name": "u",
+                    "type": "flag",
+                    "without": [ "patch", "p", "s", "no-patch" ]
+                },
+                {
+                    "name": "no-patch",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [ "p", "u", "s", "patch" ]
+                },
+                {
+                    "name": "s",
+                    "type": "flag",
+                    "without": [ "patch", "p", "u", "no-patch" ]
+                },
+                {
+                    "name": "unified",
+                    "type": "option",
+                    "join": "",
+                    "without": "U"
+                },
+                {
+                    "name": "U",
+                    "type": "flag",
+                    "useValue": true,
+                    "join": "",
+                    "without": "unified"
+                },
+                {
+                    "name": "raw",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "patch-with-raw",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "indent-heuristic",
+                    "type": "option",
+                    "useValue": false,
+                    "without": "no-indent-heuristic"
+                },
+                {
+                    "name": "no-indent-heuristic",
+                    "type": "option",
+                    "useValue": false,
+                    "without": "indent-heuristic"
+                },
+                {
+                    "name": "minimal",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "patience",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "minimal",
+                        "histogram",
+                        "anchored",
+                        "diff-algorithm"
+                    ]
+                },
+                {
+                    "name": "histogram",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "minimal",
+                        "patience",
+                        "anchored",
+                        "diff-algorithm"
+                    ]
+                },
+                {
+                    "name": "anchored",
+                    "type": "option",
+                    "join": =",
+                    "without": [
+                        "minimal",
+                        "patience",
+                        "histogram",
+                        "diff-algorithm"
+                    ]
+                },
+                {
+                    "name": "diff-algorithm",
+                    "type": "option",
+                    "join": =",
+                    "without": [
+                        "anchored",
+                        "patience",
+                        "histogram"
+                    ],
+                    "choices": [
+                        "default",
+                        "patience",
+                        "minimal",
+                        "histogram",
+                        "myers"
+                    ]
+                },
+                {
+                    "name": "stat",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "",
+                    "without": [
+                        "numstat",
+                        "shortstat",
+                        "dirstat"
+                    ]
+                },
+                {
+                    "name": "compact-summary",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "numstat",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "stat",
+                        "shortstat",
+                        "dirstat"
+                    ]
+                },
+                {
+                    "name": "shortstat",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "stat",
+                        "numstat",
+                        "dirstat"
+                    ]
+                },
+                {
+                    "name": "dirstat",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "=",
+                    "without": [
+                        "stat",
+                        "numstat",
+                        "shortstat"
+                    ]
+                },
+                {
+                    "name": "summary",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "patch-with-stat",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "z",
+                    "type": "flag"
+                },
+                {
+                    "name": "name-only",
+                    "type": "option",
+                    "useValue": false,
+                    "without": "name-status"
+                },
+                {
+                    "name": "name-status",
+                    "type": "option",
+                    "useValue": false,
+                    "without": "name-only"
+                },
+                {
+                    "name": "submodule",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "="
+                },
+                {
+                    "name": "color",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "=",
+                    "without": "no-color"
+                },
+                {
+                    "name": "no-color",
+                    "type": "option",
+                    "useValue": false,
+                    "without": "color"
+                },
+                {
+                    "name": "color-moved",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "=",
+                    "choices": [
+                        "no",
+                        "default",
+                        "plain",
+                        "blocks",
+                        "zebra",
+                        "dimmed-zebra"
+                    ],
+                    "without": [
+                        "no-color-moved",
+                        "color-moved-ws",
+                        "no-color-moved-ws"
+                    ]
+                },
+                {
+                    "name": "no-color-moved",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "color-moved",
+                        "color-moved-ws",
+                        "no-color-moved-ws"
+                    ]
+                },
+                {
+                    "name": "color-moved-ws",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "=",
+                    "choices": [
+                        "no",
+                        "ignore-space-at-eol",
+                        "ignore-space-change",
+                        "ignore-all-space",
+                        "allow-indentation-change"
+                    ],
+                    "without": [
+                        "color-moved",
+                        "no-color-moved",
+                        "no-color-moved-ws"
+                    ]
+                },
+                {
+                    "name": "no-color-moved-ws",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "color-moved",
+                        "no-color-moved",
+                        "color-moved-ws"
+                    ]
+                },
+                {
+                    "name": "word-diff",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "=",
+                    "choices": [
+                        "color",
+                        "plain",
+                        "porcelain",
+                        "none"
+                    ],
+                    "without": [
+                        "word-diff-regex"
+                    ]
+                },
+                {
+                    "name": "word-diff-regex",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "=",
+                    "without": [
+                        "word-diff"
+                    ]
+                },
+                {
+                    "name": "color-words",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "="
+                },
+                {
+                    "name": "no-renames",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "check",
+                    "type": "option",
+                    "useValue": false
+                }
             ]
         },
         "args": [
@@ -985,6 +1293,54 @@
                     {
                         "name": "pathspec",
                         "type": "--"
+                    }
+                ]
+            },
+            {
+                "command": "diff",
+                "args": [
+                    {
+                        "name": "diff",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "cached",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "no-index"
+                    },
+                    {
+                        "name": "no-index",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "cached"
+                    },
+                    {
+                        "name": "commit",
+                        "type": "value",
+                        "without": [ "commits", "blobs" ]
+                    },
+                    {
+                        "name": "commits",
+                        "type": "values",
+                        "without": "blobs",
+                        "without": [ "commit", "blobs" ]
+                    },
+                    {
+                        "name": "blobs",
+                        "type": "values",
+                        "without": "commits",
+                        "without": [ "commit", "commits" ]
+                    },
+                    {
+                        "name": "path",
+                        "type": "--",
+                        "without": "paths"
+                    },
+                    {
+                        "name": "paths",
+                        "type": "--",
+                        "without": "path"
                     }
                 ]
             },
