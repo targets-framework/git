@@ -497,7 +497,7 @@
                 ]
             },
             {
-                "command": "iniit",
+                "command": "init",
                 "args": [
                     {
                         "name": "q",
