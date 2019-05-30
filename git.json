@@ -87,6 +87,32 @@
                     "without": "force"
                 }
             ],
+            "all": [
+                {
+                    "name": "all",
+                    "type": "option",
+                    "useValue": false,
+                    "without": "a"
+                },
+                {
+                    "name": "a",
+                    "type": "flag",
+                    "without": "all"
+                }
+            ],
+            "patch": [
+                {
+                    "name": "patch",
+                    "type": "option",
+                    "useValue": false,
+                    "without": "p"
+                },
+                {
+                    "name": "p",
+                    "type": "flag",
+                    "without": "patch"
+                }
+            ],
             "interactive": [
                 {
                     "name": "interactive",
@@ -1682,6 +1708,269 @@
                         "name": "paths",
                         "type": "--",
                         "without": "path"
+                    }
+                ]
+            },
+            {
+                "command": "commit",
+                "args": [
+                    {
+                        "name": "all",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "interactive",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "patch",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "template",
+                        "type": "option",
+                        "join": "=",
+                        "without": "t"
+                    },
+                    {
+                        "name": "t",
+                        "type": "flag",
+                        "useValue": true,
+                        "without": "template"
+                    },
+                    {
+                        "name": "signoff",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "s"
+                    },
+                    {
+                        "name": "s",
+                        "type": "flag",
+                        "without": "signoff"
+                    },
+                    {
+                        "name": "verbose",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "untracked-files",
+                        "type": "option",
+                        "useValue": "string",
+                        "join": "=",
+                        "choices": [
+                            "no",
+                            "normal",
+                            "all"
+                        ],
+                        "without": "u"
+                    },
+                    {
+                        "name": "u",
+                        "type": "flag",
+                        "useValue": "string",
+                        "join": "",
+                        "choices": [
+                            "no",
+                            "normal",
+                            "all"
+                        ],
+                        "without": "untracked-files"
+                    },
+                    {
+                        "name": "amend",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "dry-run",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "c",
+                        "type": "flag",
+                        "useValue": true,
+                        "without": [
+                            "C",
+                            "fixup",
+                            "squash"
+                        ]
+                    },
+                    {
+                        "name": "C",
+                        "type": "flag",
+                        "useValue": true,
+                        "without": [
+                            "c",
+                            "fixup",
+                            "squash"
+                        ]
+                    },
+                    {
+                        "name": "fixup",
+                        "type": "option",
+                        "without": [
+                            "c",
+                            "C",
+                            "squash"
+                        ]
+                    },
+                    {
+                        "name": "squash",
+                        "type": "option",
+                        "without": [
+                            "c",
+                            "C",
+                            "fixup"
+                        ]
+                    },
+                    {
+                        "name": "file",
+                        "type": "option",
+                        "join": "=",
+                        "without": [ "F", "m", "message" ]
+                    },
+                    {
+                        "name": "F",
+                        "type": "flag",
+                        "useValue": true,
+                        "without": [ "file", "m", "message" ]
+                    },
+                    {
+                        "name": "message",
+                        "type": "option",
+                        "join": "=",
+                        "without": [ "F", "f", "message" ]
+                    },
+                    {
+                        "name": "m",
+                        "type": "flag",
+                        "useValue": true,
+                        "without": [ "F", "file", "message" ]
+                    },
+                    {
+                        "name": "reset-author",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "allow-empty",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "allow-empty-message",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "no-verify",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "n"
+                    },
+                    {
+                        "name": "n",
+                        "type": "flag",
+                        "without": "no-verify"
+                    },
+                    {
+                        "name": "edit",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "e"
+                    },
+                    {
+                        "name": "e",
+                        "type": "flag",
+                        "without": "edit"
+                    },
+                    {
+                        "name": "author",
+                        "type": "option",
+                        "join": "="
+                    },
+                    {
+                        "name": "date",
+                        "type": "option",
+                        "join": "="
+                    },
+                    {
+                        "name": "cleanup",
+                        "type": "option",
+                        "join": "=",
+                        "choices": [
+                            "strip",
+                            "whitespace",
+                            "verbatim",
+                            "scissors",
+                            "default"
+                        ]
+                    },
+                    {
+                        "name": "status",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "no-status"
+                    },
+                    {
+                        "name": "no-status",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "status"
+                    },
+                    {
+                        "name": "input",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "i"
+                    },
+                    {
+                        "name": "i",
+                        "type": "flag",
+                        "without": "input"
+                    },
+                    {
+                        "name": "only",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "o"
+                    },
+                    {
+                        "name": "o",
+                        "type": "flag",
+                        "without": "only"
+                    },
+                    {
+                        "name": "gpg-sign",
+                        "type": "option",
+                        "useValue": "string",
+                        "join": "=",
+                        "without": [ "no-gpg-sign", "S" ]
+                    },
+                    {
+                        "name": "no-gpg-sign",
+                        "type": "option",
+                        "useValue": false,
+                        "without": [ "gpg-sign", "S" ]
+                    },
+                    {
+                        "name": "S",
+                        "type": "flag",
+                        "useValue": "string",
+                        "join": "",
+                        "without": [ "no-gpg-sign", "gpg-sign" ]
+                    },
+                    {
+                        "name": "file",
+                        "type": "--",
+                        "without": "files"
+                    },
+                    {
+                        "name": "files",
+                        "type": "--",
+                        "without": "file"
                     }
                 ]
             },
