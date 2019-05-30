@@ -2089,6 +2089,92 @@
                 ]
             },
             {
+                "command": "rm",
+                "args": [
+                    {
+                        "name": "force",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "f"
+                    },
+                    {
+                        "name": "f",
+                        "type": "flag",
+                        "without": "force"
+                    },
+                    {
+                        "name": "dry-run",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "r",
+                        "type": "flag"
+                    },
+                    {
+                        "name": "cached",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "ignore-unmatch",
+                        "type": "option",
+                        "useValue": false
+                    },
+                    {
+                        "name": "quiet",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "file",
+                        "type": "--",
+                        "without": "files"
+                    },
+                    {
+                        "name": "files",
+                        "type": "--",
+                        "without": "file"
+                    }
+                ]
+            },
+            {
+                "command": "mv",
+                "args": [
+                    {
+                        "name": "verbose",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "force",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "f"
+                    },
+                    {
+                        "name": "f",
+                        "type": "flag",
+                        "without": "force"
+                    },
+                    {
+                        "name": "k",
+                        "type": "flag"
+                    },
+                    {
+                        "name": "dry-run",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "source",
+                        "type": "value",
+                        "required": true
+                    },
+                    {
+                        "name": "destination",
+                        "type": "value",
+                        "required": true
+                    }
+                ]
+            },
+            {
                 "command": "branch",
                 "args": [
                     {
