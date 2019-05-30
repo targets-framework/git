@@ -20,7 +20,9 @@
                     "type": "option",
                     "useValue": false,
                     "without": [ "v", "vv" ]
-                },
+                }
+            ],
+            "abbrev": [
                 {
                     "name": "abbrev",
                     "type": "option",
@@ -34,7 +36,9 @@
                     "useValue": false,
                     "with": [ "v", "vv", "verbose" ],
                     "without": "abbrev"
-                },
+                }
+            ],
+            "quiet": [
                 {
                     "name": "q",
                     "type": "flag",
@@ -1180,6 +1184,10 @@
                         "type": "collection"
                     },
                     {
+                        "name": "quiet",
+                        "type": "collection"
+                    },
+                    {
                         "name": "progress",
                         "type": "option",
                         "useValue": false
@@ -1315,6 +1323,10 @@
                 "args": [
                     {
                         "name": "verbose",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "quiet",
                         "type": "collection"
                     },
                     {
@@ -1488,6 +1500,10 @@
                     },
                     {
                         "name": "verbose",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "quiet",
                         "type": "collection"
                     },
                     {
@@ -1754,6 +1770,10 @@
                         "type": "collection"
                     },
                     {
+                        "name": "quiet",
+                        "type": "collection"
+                    },
+                    {
                         "name": "untracked-files",
                         "type": "option",
                         "useValue": "string",
@@ -1975,6 +1995,100 @@
                 ]
             },
             {
+                "command": "reset",
+                "args": [
+                    {
+                        "name": "patch",
+                        "type": "option",
+                        "useValue": false,
+                        "without": "p"
+                    },
+                    {
+                        "name": "p",
+                        "type": "flag",
+                        "without": "patch"
+                    },
+                    {
+                        "name": "soft",
+                        "type": "option",
+                        "useValue": false,
+                        "without": [
+                            "mixed",
+                            "hard",
+                            "merge",
+                            "keep"
+                        ]
+                    },
+                    {
+                        "name": "mixed",
+                        "type": "option",
+                        "useValue": false,
+                        "without": [
+                            "soft",
+                            "hard",
+                            "merge",
+                            "keep"
+                        ]
+                    },
+                    {
+                        "name": "N",
+                        "type": "flag",
+                        "with": "mixed"
+                    },
+                    {
+                        "name": "hard",
+                        "type": "option",
+                        "useValue": false,
+                        "without": [
+                            "soft",
+                            "mixed",
+                            "merge",
+                            "keep"
+                        ]
+                    },
+                    {
+                        "name": "merge",
+                        "type": "option",
+                        "useValue": false,
+                        "without": [
+                            "soft",
+                            "mixed",
+                            "hard",
+                            "keep"
+                        ]
+                    },
+                    {
+                        "name": "keep",
+                        "type": "option",
+                        "useValue": false,
+                        "without": [
+                            "soft",
+                            "mixed",
+                            "hard",
+                            "merge"
+                        ]
+                    },
+                    {
+                        "name": "quiet",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "tree-ish",
+                        "type": "value",
+                        "without": "commit"
+                    },
+                    {
+                        "name": "commit",
+                        "type": "value",
+                        "without": "tree-ish"
+                    },
+                    {
+                        "name": "paths",
+                        "type": "--"
+                    }
+                ]
+            },
+            {
                 "command": "branch",
                 "args": [
                     {
@@ -2011,6 +2125,14 @@
                     },
                     {
                         "name": "verbose",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "quiet",
+                        "type": "collection"
+                    },
+                    {
+                        "name": "abbrev",
                         "type": "collection"
                     },
                     {
