@@ -1,6 +1,6 @@
 {
   "name": "@targets/git",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Git ShellSpec target",
   "main": "git.json",
   "scripts": {
