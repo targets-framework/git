@@ -1861,7 +1861,7 @@
                         "name": "message",
                         "type": "option",
                         "join": "=",
-                        "without": [ "F", "f", "message" ]
+                        "without": [ "F", "f", "m" ]
                     },
                     {
                         "name": "m",
