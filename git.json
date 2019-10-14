@@ -2225,6 +2225,40 @@
                             }
                         ]
                     },
+                    "log": {
+                        "args": [
+                            {
+                                "name": "diffcore",
+                                "type": "collection"
+                            },
+                            {
+                                "name": "follow",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "decorate",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "without": [
+                                    "no-decorate"
+                                ]
+                            },
+                            {
+                                "name": "no-decorate",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "decorate"
+                                ]
+                            },
+                            {
+                                "name": "revision-range",
+                                "type": "value"
+                            }
+                        ]
+                    },
                     "rev-parse": {
                         "args": [
                             {
