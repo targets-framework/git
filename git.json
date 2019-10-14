@@ -1846,6 +1846,385 @@
                             }
                         ]
                     },
+                    "merge": {
+                        "args": [
+                            {
+                                "name": "n",
+                                "type": "flag",
+                                "aka": "no-stat",
+                                "without": [
+                                    "stat",
+                                    "no-stat"
+                                ]
+                            },
+                            {
+                                "name": "no-stat",
+                                "type": "option",
+                                "useValue": false,
+                                "aka": "n",
+                                "without": [
+                                    "n",
+                                    "stat"
+                                ]
+                            },
+                            {
+                                "name": "stat",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "n",
+                                    "no-stat"
+                                ]
+                            },
+                            {
+                                "name": "e",
+                                "type": "flag",
+                                "aka": "edit",
+                                "without": [
+                                    "edit",
+                                    "no-edit"
+                                ]
+                            },
+                            {
+                                "name": "no-edit",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "e",
+                                    "edit"
+                                ]
+                            },
+                            {
+                                "name": "edit",
+                                "type": "option",
+                                "useValue": false,
+                                "aka": "e",
+                                "without": [
+                                    "e",
+                                    "no-edit"
+                                ]
+                            },
+                            {
+                                "name": "cleanup",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "="
+                            },
+                            {
+                                "name": "no-commit",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "commit"
+                                ]
+                            },
+                            {
+                                "name": "commit",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-commit"
+                                ]
+                            },
+                            {
+                                "name": "no-ff",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "ff",
+                                    "ff-only"
+                                ]
+                            },
+                            {
+                                "name": "ff",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-ff",
+                                    "ff-only"
+                                ]
+                            },
+                            {
+                                "name": "ff-only",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-ff",
+                                    "ff"
+                                ]
+                            },
+                            {
+                                "name": "gpg-sign",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "aka": "S",
+                                "without": [
+                                    "S"
+                                ]
+                            },
+                            {
+                                "name": "S",
+                                "type": "flag",
+                                "aka": "gpg-sign",
+                                "useValue": "string",
+                                "without": [
+                                    "gpg-sign"
+                                ]
+                            },
+                            {
+                                "name": "log",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "without": [
+                                    "no-log"
+                                ]
+                            },
+                            {
+                                "name": "no-log",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "log"
+                                ]
+                            },
+                            {
+                                "name": "signoff",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-signoff"
+                                ]
+                            },
+                            {
+                                "name": "no-signoff",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "signoff"
+                                ]
+                            },
+                            {
+                                "name": "squash",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-squash"
+                                ]
+                            },
+                            {
+                                "name": "no-squash",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "squash"
+                                ]
+                            },
+                            {
+                                "name": "strategy",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "aka": "s",
+                                "without": [
+                                    "s"
+                                ]
+                            },
+                            {
+                                "name": "s",
+                                "type": "flag",
+                                "useValue": "string",
+                                "aka": "strategy",
+                                "without": [
+                                    "strategy"
+                                ]
+                            },
+                            {
+                                "name": "strategy-option",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "aka": "X",
+                                "without": [
+                                    "X"
+                                ]
+                            },
+                            {
+                                "name": "X",
+                                "type": "flag",
+                                "useValue": "string",
+                                "aka": "strategy-option",
+                                "without": [
+                                    "strategy-option"
+                                ]
+                            },
+                            {
+                                "name": "verify-signatures",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-verify-signatures"
+                                ]
+                            },
+                            {
+                                "name": "no-verify-signatures",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "verify-signatures"
+                                ]
+                            },
+                            {
+                                "name": "progress",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-progress"
+                                ]
+                            },
+                            {
+                                "name": "no-progress",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "progress"
+                                ]
+                            },
+                            {
+                                "name": "quiet",
+                                "type": "option",
+                                "useValue": false,
+                                "aka": "q",
+                                "without": [
+                                    "q",
+                                    "v",
+                                    "verbose"
+                                ]
+                            },
+                            {
+                                "name": "q",
+                                "type": "flag",
+                                "useValue": false,
+                                "aka": "quiet",
+                                "without": [
+                                    "quiet",
+                                    "v",
+                                    "verbose"
+                                ]
+                            },
+                            {
+                                "name": "verbose",
+                                "type": "option",
+                                "useValue": false,
+                                "aka": "v",
+                                "without": [
+                                    "q",
+                                    "v",
+                                    "quiet"
+                                ]
+                            },
+                            {
+                                "name": "v",
+                                "type": "flag",
+                                "useValue": false,
+                                "aka": "verbose",
+                                "without": [
+                                    "quiet",
+                                    "q",
+                                    "verbose"
+                                ]
+                            },
+                            {
+                                "name": "allow-unrelated-histories",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "m",
+                                "type": "flag",
+                                "useValue": true
+                            },
+                            {
+                                "name": "F",
+                                "type": "flag",
+                                "useValue": true,
+                                "aka": "file",
+                                "without": [
+                                    "file"
+                                ]
+                            },
+                            {
+                                "name": "file",
+                                "type": "option",
+                                "useValue": true,
+                                "join": "=",
+                                "aka": "F",
+                                "without": [
+                                    "F"
+                                ]
+                            },
+                            {
+                                "name": "rerere-autoupdate",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-rerere-autoupdate"
+                                ]
+                            },
+                            {
+                                "name": "no-rerere-autoupdate",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "rerere-autoupdate"
+                                ]
+                            },
+                            {
+                                "name": "overwrite-ignore",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-overwrite-ignore"
+                                ]
+                            },
+                            {
+                                "name": "no-overwrite-ignore",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "overwrite-ignore"
+                                ]
+                            },
+                            {
+                                "name": "abort",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "quit",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "continue",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "commit",
+                                "type": "value",
+                                "aka": "commits",
+                                "without": [ "commits" ]
+                            },
+                            {
+                                "name": "commits",
+                                "type": "value",
+                                "aka": "commit",
+                                "without": [ "commit" ]
+                            }
+                        ]
+                    },
                     "rev-parse": {
                         "args": [
                             {
