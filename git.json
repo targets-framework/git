@@ -2232,6 +2232,10 @@
                                 "type": "collection"
                             },
                             {
+                                "name": "rev-list",
+                                "type": "collection"
+                            },
+                            {
                                 "name": "follow",
                                 "type": "option",
                                 "useValue": false
@@ -2446,6 +2450,532 @@
                     "type": "option",
                     "useValue": false,
                     "without": "color"
+                }
+            ],
+            "rev-list": [
+                {
+                    "name": "max-count",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "="
+                },
+                {
+                    "name": "skip",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "="
+                },
+                {
+                    "name": "max-age",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "="
+                },
+                {
+                    "name": "min-age",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "="
+                },
+                {
+                    "name": "sparse",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "merges",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "no-merges"
+                    ]
+                },
+                {
+                    "name": "no-merges",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "merges"
+                    ]
+                },
+                {
+                    "name": "min-parents",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "=",
+                    "without": [
+                        "no-min-parents"
+                    ]
+                },
+                {
+                    "name": "no-min-parents",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "min-parents"
+                    ]
+                },
+                {
+                    "name": "max-parents",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "=",
+                    "without": [
+                        "no-max-parents"
+                    ]
+                },
+                {
+                    "name": "no-max-parents",
+                    "useValue": false,
+                    "without": [
+                        "max-parents"
+                    ]
+                },
+                {
+                    "name": "first-parent",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "remove-empty",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "full-history",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "not",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "all",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "branches",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "="
+                },
+                {
+                    "name": "tags",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "="
+                },
+                {
+                    "name": "remotes",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "="
+                },
+                {
+                    "name": "glob",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "="
+                },
+                {
+                    "name": "ignore-missing",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "stdin",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "quiet",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "q",
+                    "without": [
+                        "q"
+                    ]
+                },
+                {
+                    "name": "q",
+                    "type": "flag",
+                    "aka": "quiet",
+                    "without": [
+                        "quiet"
+                    ]
+                },
+                {
+                    "name": "topo-order",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "parents",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "timestamp",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "cherry",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "left-right",
+                        "left-only",
+                        "right-only",
+                        "cherry-mark",
+                        "merges",
+                        "no-merges"
+                    ]
+                },
+                {
+                    "name": "left-right",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "left-only",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "right-only",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "cherry-mark",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "cherry-pick",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "encoding",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "="
+                },
+                {
+                    "name": "author",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "=",
+                    "without": [
+                        "committer",
+                        "grep"
+                    ]
+                },
+                {
+                    "name": "committer",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "=",
+                    "without": [
+                        "author",
+                        "grep"
+                    ]
+                },
+                {
+                    "name": "grep",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "=",
+                    "without": [
+                        "author",
+                        "committer"
+                    ]
+                },
+                {
+                    "name": "regexp-ignore-case",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "i",
+                    "without": [
+                        "i"
+                    ]
+                },
+                {
+                    "name": "i",
+                    "type": "flag",
+                    "aka": "regexp-ignore-case",
+                    "without": [
+                        "regexp-ignore-case"
+                    ]
+                },
+                {
+                    "name": "extended-regexp",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "E",
+                    "without": [
+                        "E"
+                    ]
+                },
+                {
+                    "name": "E",
+                    "type": "flag",
+                    "aka": "extended-regexp",
+                    "without": [
+                        "extended-regexp"
+                    ]
+                },
+                {
+                    "name": "fixed-strings",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "F",
+                    "without": [
+                        "F"
+                    ]
+                },
+                {
+                    "name": "F",
+                    "type": "flag",
+                    "aka": "fixed-strings",
+                    "without": [
+                        "fixed-strings"
+                    ]
+                },
+                {
+                    "name": "date",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "="
+                },
+                {
+                    "name": "date-order",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "author-date-order",
+                        "topo-order"
+                    ]
+                },
+                {
+                    "name": "author-date-order",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "date-order",
+                        "topo-order"
+                    ]
+                },
+                {
+                    "name": "topo-order",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "date-order",
+                        "author-date-order"
+                    ]
+                },
+                {
+                    "name": "reverse",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "g",
+                        "walk-reflogs"
+                    ]
+                },
+                {
+                    "name": "objects",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "objects-edge",
+                        "objects-edge-aggressive"
+                    ]
+                },
+                {
+                    "name": "objects-edge",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "objects",
+                        "objects-edge-aggressive"
+                    ]
+                },
+                {
+                    "name": "objects-edge-aggressive",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "objects",
+                        "objects-edge"
+                    ]
+                },
+                {
+                    "name": "unpacked",
+                    "type": "option",
+                    "useValue": false,
+                    "with": [
+                        "objects",
+                        "objects-edge",
+                        "objects-edge-aggressive"
+                    ]
+                },
+                {
+                    "name": "object-names",
+                    "type": "option",
+                    "useValue": false,
+                    "with": [
+                        "objects",
+                        "objects-edge",
+                        "objects-edge-aggressive"
+                    ],
+                    "without": [
+                        "no-object-names"
+                    ]
+                },
+                {
+                    "name": "no-object-names",
+                    "type": "option",
+                    "useValue": false,
+                    "with": [
+                        "objects",
+                        "objects-edge",
+                        "objects-edge-aggressive"
+                    ],
+                    "without": [
+                        "object-names"
+                    ]
+                },
+                {
+                    "name": "filter",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "=",
+                    "with": [
+                        "objects",
+                        "objects-edge",
+                        "objects-edge-aggressive"
+                    ]
+                },
+                {
+                    "name": "filter-print-omitted",
+                    "type": "option",
+                    "useValue": false,
+                    "with": [
+                        "objects",
+                        "objects-edge",
+                        "objects-edge-aggressive"
+                    ]
+                },
+                {
+                    "name": "missing",
+                    "type": "option",
+                    "useValue": true,
+                    "join": "="
+                },
+                {
+                    "name": "pretty",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "=",
+                    "without": [
+                        "header"
+                    ]
+                },
+                {
+                    "name": "header",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "pretty"
+                    ]
+                },
+                {
+                    "name": "progress",
+                    "type": "option",
+                    "useValue": true
+                },
+                {
+                    "name": "bisect",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "bisect-vars",
+                        "bisect-all"
+                    ]
+                },
+                {
+                    "name": "bisect-vars",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "bisect",
+                        "bisect-all"
+                    ]
+                },
+                {
+                    "name": "bisect-all",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "bisect",
+                        "bisect-vars"
+                    ]
+                },
+                {
+                    "name": "merge",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "boundary",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "walk-reflogs",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "g",
+                    "without": [
+                        "g"
+                    ]
+                },
+                {
+                    "name": "g",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "walk-reflogs",
+                    "without": [
+                        "walk-reflogs"
+                    ]
+                },
+                {
+                    "name": "no-walk",
+                    "type": "option",
+                    "useValue": "string",
+                    "join": "="
+                },
+                {
+                    "name": "do-walk",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "count",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "use-bitmap-index",
+                    "type": "option",
+                    "useValue": false
                 }
             ],
             "diffcore": [

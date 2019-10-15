@@ -15,7 +15,7 @@ This is a work-in-progress. It is an attempt to comprehensively define the git c
 [x] branch
 [x] checkout
 [x] merge
-[ ] log
+[x] log
 [ ] stash
 [ ] tag
 [ ] fetch
