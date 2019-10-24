@@ -2263,13 +2263,315 @@
                             }
                         ]
                     },
+                    "rev-list": {
+                        "args": [
+                            {
+                                "name": "rev-list",
+                                "type": "collection"
+                            }
+                        ]
+                    },
                     "rev-parse": {
                         "args": [
+                            {
+                                "name": "parseopt",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "keep-dashdash",
+                                "type": "option",
+                                "useValue": false,
+                                "with": [
+                                    "parseopt"
+                                ]
+                            },
+                            {
+                                "name": "stop-at-non-option",
+                                "type": "option",
+                                "useValue": false,
+                                "with": [
+                                    "parseopt"
+                                ]
+                            },
+                            {
+                                "name": "stuck-long",
+                                "type": "option",
+                                "useValue": false,
+                                "with": [
+                                    "parseopt"
+                                ]
+                            },
+                            {
+                                "name": "sq-quote",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "sq"
+                                ]
+                            },
+                            {
+                                "name": "sq",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "sq-quote"
+                                ]
+                            },
+                            {
+                                "name": "revs-only",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-revs"
+                                ]
+                            },
+                            {
+                                "name": "no-revs",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "revs-only"
+                                ]
+                            },
+                            {
+                                "name": "flags",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "no-flags"
+                                ]
+                            },
+                            {
+                                "name": "no-flags",
+                                "type": "option",
+                                "useValue": false,
+                                "without": [
+                                    "flags"
+                                ]
+                            },
+                            {
+                                "name": "default",
+                                "type": "option",
+                                "default": "HEAD"
+                            },
+                            {
+                                "name": "prefix",
+                                "type": "option"
+                            },
+                            {
+                                "name": "verify",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "quiet",
+                                "aka": "q",
+                                "type": "option",
+                                "useValue": false,
+                                "with": [
+                                    "verify"
+                                ],
+                                "without": [
+                                    "q"
+                                ]
+                            },
+                            {
+                                "name": "q",
+                                "aka": "quiet",
+                                "type": "flag",
+                                "with": [
+                                    "verify"
+                                ],
+                                "without": [
+                                    "quiet"
+                                ]
+                            },
                             {
                                 "name": "short",
                                 "type": "option",
                                 "join": "=",
                                 "default": 12
+                            },
+                            {
+                                "name": "not",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "abbrev-ref",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "choices": [
+                                    "strict",
+                                    "loose"
+                                ]
+                            },
+                            {
+                                "name": "symbolic",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "symbolic-full-name",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "exclude",
+                                "type": "option",
+                                "useValue": true,
+                                "join": "="
+                            },
+                            {
+                                "name": "all",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "branches",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "without": [
+                                    "tags",
+                                    "remotes"
+                                ]
+                            },
+                            {
+                                "name": "tags",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "without": [
+                                    "branches",
+                                    "remotes"
+                                ]
+                            },
+                            {
+                                "name": "remotes",
+                                "type": "option",
+                                "useValue": "string",
+                                "join": "=",
+                                "without": [
+                                    "branches",
+                                    "tags"
+                                ]
+                            },
+                            {
+                                "name": "glob",
+                                "type": "option",
+                                "useValue": true,
+                                "join": "=",
+                                "without": [
+                                    "branches",
+                                    "tags",
+                                    "remotes"
+                                ]
+                            },
+                            {
+                                "name": "disambiguate",
+                                "type": "option",
+                                "useValue": true,
+                                "join": "="
+                            },
+                            {
+                                "name": "local-env-vars",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "git-dir",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "absolute-git-dir",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "git-common-dir",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "is-inside-git-dir",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "is-inside-work-tree",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "is-bare-repository",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "is-shallow-repository",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "resolve-git-dir",
+                                "type": "option"
+                            },
+                            {
+                                "name": "git-path",
+                                "type": "option"
+                            },
+                            {
+                                "name": "show-cdup",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "show-prefix",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "show-toplevel",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "show-superproject-working-tree",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "shared-index-path",
+                                "type": "option",
+                                "useValue": false
+                            },
+                            {
+                                "name": "since",
+                                "type": "option",
+                                "useValue": true,
+                                "join": "="
+                            },
+                            {
+                                "name": "after",
+                                "type": "option",
+                                "useValue": true,
+                                "join": "="
+                            },
+                            {
+                                "name": "until",
+                                "type": "option",
+                                "useValue": true,
+                                "join": "="
+                            },
+                            {
+                                "name": "before",
+                                "type": "option",
+                                "useValue": true,
+                                "join": "="
                             },
                             {
                                 "name": "refspec",

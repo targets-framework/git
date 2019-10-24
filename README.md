@@ -16,6 +16,8 @@ This is a work-in-progress. It is an attempt to comprehensively define the git c
 [x] checkout
 [x] merge
 [x] log
+[x] rev-list
+[ ] rev-parse
 [ ] stash
 [ ] tag
 [ ] fetch
@@ -28,7 +30,6 @@ This is a work-in-progress. It is an attempt to comprehensively define the git c
 [ ] revert
 [ ] blame
 [ ] grep
-[ ] rev-parse
 
 ### Out of Scope (for now)
 
@@ -66,7 +67,6 @@ This is a work-in-progress. It is an attempt to comprehensively define the git c
 * ls-files
 * merge-base
 * read-tree
-* rev-list
 * show-ref
 * symbolic-ref
 * update-index
