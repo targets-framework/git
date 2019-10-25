@@ -2580,6 +2580,157 @@
                             }
                         ]
                     },
+                    "stash": {
+                        "args": [
+                            {
+                                "name": "stash-common",
+                                "type": "collection"
+                            },
+                            {
+                                "name": "stash-push",
+                                "type": "collection"
+                            }
+                        ],
+                        "commands": {
+                            "list": {
+                                "args": [
+                                    {
+                                        "name": "diffcore",
+                                        "type": "collection"
+                                    },
+                                    {
+                                        "name": "rev-list",
+                                        "type": "collection"
+                                    },
+                                    {
+                                        "name": "follow",
+                                        "type": "option",
+                                        "useValue": false
+                                    },
+                                    {
+                                        "name": "decorate",
+                                        "type": "option",
+                                        "useValue": "string",
+                                        "join": "=",
+                                        "without": [
+                                            "no-decorate"
+                                        ]
+                                    },
+                                    {
+                                        "name": "no-decorate",
+                                        "type": "option",
+                                        "useValue": false,
+                                        "without": [
+                                            "decorate"
+                                        ]
+                                    },
+                                    {
+                                        "name": "revision-range",
+                                        "type": "value"
+                                    }
+                                ]
+                            },
+                            "show": {
+                                "args": [
+                                    {
+                                        "name": "diffcore",
+                                        "type": "collection"
+                                    },
+                                    {
+                                        "name": "stash",
+                                        "type": "value"
+                                    }
+                                ]
+                            },
+                            "drop": {
+                                "args": [
+                                    {
+                                        "name": "quiet",
+                                        "type": "option",
+                                        "useValue": false,
+                                        "aka": "q",
+                                        "without": [
+                                            "q"
+                                        ]
+                                    },
+                                    {
+                                        "name": "q",
+                                        "type": "flag",
+                                        "aka": "quiet",
+                                        "without": [
+                                            "quiet"
+                                        ]
+                                    },
+                                    {
+                                        "name": "stash",
+                                        "type": "value"
+                                    }
+                                ]
+                            },
+                            "pop": {
+                                "args": [
+                                    {
+                                        "name": "stash-apply",
+                                        "type": "collection"
+                                    }
+                                ]
+                            },
+                            "apply": {
+                                "args": [
+                                    {
+                                        "name": "stash-apply",
+                                        "type": "collection"
+                                    }
+                                ]
+                            },
+                            "branch": {
+                                "args": [
+                                    {
+                                        "name": "branchname",
+                                        "type": "value",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "stash",
+                                        "type": "value"
+                                    }
+                                ]
+                            },
+                            "save": {
+                                "args": [
+                                    {
+                                        "name": "stash-common",
+                                        "type": "collection"
+                                    },
+                                    {
+                                        "name": "message",
+                                        "type": "value"
+                                    }
+                                ]
+                            },
+                            "push": {
+                                "args": [
+                                    {
+                                        "name": "stash-common",
+                                        "type": "collection"
+                                    },
+                                    {
+                                        "name": "stash-push",
+                                        "type": "collection"
+                                    }
+                                ]
+                            },
+                            "clear": {
+                                "args": []
+                            },
+                            "create": {
+                                "args": []
+                            },
+                            "store": {
+                                "args": []
+                            }
+                        }
+                    },
                     "push": {
                         "args": [
                             {
@@ -3854,6 +4005,158 @@
                     "name": "line-prefix",
                     "type": "option",
                     "join": "="
+                }
+            ],
+            "stash-common": [
+                {
+                    "name": "p",
+                    "type": "flag",
+                    "aka": "patch",
+                    "without": [
+                        "patch"
+                    ]
+                },
+                {
+                    "name": "patch",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "p",
+                    "without": [
+                        "p"
+                    ]
+                },
+                {
+                    "name": "k",
+                    "type": "flag",
+                    "aka": "keep-index",
+                    "without": [
+                        "keep-index"
+                    ]
+                },
+                {
+                    "name": "keep-index",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "k",
+                    "without": [
+                        "k"
+                    ]
+                },
+                {
+                    "name": "no-keep-index",
+                    "type": "option",
+                    "useValue": false,
+                    "without": [
+                        "k",
+                        "keep-index"
+                    ]
+                },
+                {
+                    "name": "q",
+                    "type": "flag",
+                    "aka": "quiet",
+                    "without": [
+                        "quiet"
+                    ]
+                },
+                {
+                    "name": "quiet",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "q",
+                    "without": [
+                        "q"
+                    ]
+                },
+                {
+                    "name": "u",
+                    "type": "flag",
+                    "aka": "include-untracked",
+                    "without": [
+                        "include-untracked"
+                                ]
+                },
+                {
+                    "name": "include-untracked",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "u",
+                    "without": [
+                        "u"
+                    ]
+                },
+                {
+                    "name": "a",
+                    "type": "flag",
+                    "aka": "all",
+                    "without": [
+                        "all"
+                    ]
+                },
+                {
+                    "name": "all",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "a",
+                    "without": [
+                        "a"
+                    ]
+                }
+            ],
+            "stash-push": [
+                {
+                    "name": "m",
+                    "type": "flag",
+                    "useValue": true,
+                    "aka": "message",
+                    "without": [
+                        "message"
+                    ]
+                },
+                {
+                    "name": "message",
+                    "type": "option",
+                    "aka": "m",
+                    "without": [
+                        "m"
+                    ]
+                },
+                {
+                    "name": "--",
+                    "type": "value",
+                    "value": "--"
+                },
+                {
+                    "name": "pathspec",
+                    "type": "value"
+                }
+            ],
+            "stash-apply": [
+                {
+                    "name": "index",
+                    "type": "option",
+                    "useValue": false
+                },
+                {
+                    "name": "quiet",
+                    "type": "option",
+                    "useValue": false,
+                    "aka": "q",
+                    "without": [
+                        "q"
+                    ]
+                },
+                {
+                    "name": "q",
+                    "type": "flag",
+                    "aka": "quiet",
+                    "without": [
+                        "quiet"
+                    ]
+                },
+                {
+                    "name": "stash",
+                    "type": "value"
                 }
             ]
         }
