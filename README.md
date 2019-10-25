@@ -18,7 +18,7 @@ This is a work-in-progress. It is an attempt to comprehensively define the git c
 [x] log
 [x] rev-list
 [x] rev-parse
-[ ] stash
+[x] stash
 [ ] tag
 [ ] fetch
 [ ] pull
